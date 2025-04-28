@@ -1,0 +1,630 @@
+/* Base styles and resets */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+/*  fuente */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+/*   font-family: "Bebas Neue", sans-serif; */
+h1 {
+    font-family: "Bebas Neue", sans-serif;
+
+}
+
+.h1-center {
+    text-align: center;
+}
+/* header */header{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    position: relative;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+#logo img {
+    max-height: 100%;
+    width: auto;
+}
+
+header ul{
+    padding: 0px 100 px 0px 100px;
+    list-style: none;}
+header a{
+    color: black;
+    margin-bottom: 19px;
+}
+
+.barradenavegacion{
+    width: 100%;
+    background-color: rgb(179, 148, 123);
+    z-index: 1000;
+    padding: 0;
+    order: 3;
+    flex-basis: 100%;
+}
+
+.barradenavegacion ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(179, 148, 123);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.barradenavegacion ul.active {
+    display: flex;
+}
+
+.barradenavegacion li {
+    margin: 0;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    transition: none;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.barradenavegacion li:last-child {
+    border-bottom: none;
+}
+
+.barradenavegacion li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: none;
+}
+
+.barradenavegacion a {
+    display: block;
+    padding: 15px;
+    color: white;
+}
+
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+    order: 2;
+}
+
+.burger-menu span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+    transition: all 0.3s linear;
+}
+
+/* Burger animation */
+.burger-menu[aria-expanded="true"] span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.burger-menu[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+.burger-menu[aria-expanded="true"] span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Hide burger on desktop and restore nav styles */
+@media (min-width: 768px) {
+    header {
+        flex-wrap: nowrap;
+        justify-content: center;
+        padding: 0;
+    }
+
+    #logo {
+        height: 100px;
+        order: 1;
+        margin-right: 20px;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .barradenavegacion {
+        position: sticky;
+        top: 0;
+        order: 2;
+        flex-basis: auto;
+        width: auto;
+        padding: 15px 0;
+    }
+
+    .barradenavegacion ul {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        box-shadow: none;
+        width: auto;
+    }
+
+    .barradenavegacion ul.active {
+        display: flex;
+    }
+
+    .barradenavegacion li {
+        display: inline-block;
+        margin: 0 10px;
+        background-color: #fff;
+        padding: 8px 16px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        width: auto;
+        border-bottom: none;
+    }
+
+    .barradenavegacion li:hover {
+        background-color: #e0e0e0;
+        transform: translateY(-2px);
+    }
+
+    .barradenavegacion a {
+        padding: 0;
+        color: black;
+    }
+}
+
+.padreflex{
+    justify-content: space-around;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.padreflex a {
+    color: black;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.padreflex a:hover {
+    color: white;
+}
+
+/* banner index */
+.banner{
+    height: 500px;
+    background-image: url(../imagenes/EDICIÓN\ LIMITADA\ Remeras\ oversize\ unisex\ \(1\).jpg);
+    background-size: cover;
+    background-position: 50% 20%;
+    text-align:center;
+}
+.textobienvenida{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.banner h1{
+    color: blanchedalmond;
+}
+.bienvenida h1{
+    margin-left: 50px;
+    margin-top: 50px;
+}
+.bienvenida p{
+    margin: 100px 50px 100px 50px;
+    text-align: left;
+}
+.grid-img{
+    width: 200px;
+    margin-right: 20px;
+    margin-bottom: 100px;
+    margin-left: 100px;
+    border-radius: 10px;
+}
+.textobienvenida{
+    height: 900px;
+    width: 1000px;
+}
+.textobienvenida img{
+    margin-left: 0px;
+}
+
+/* main productos */
+.productos img{
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.24);
+}
+.precios{
+    margin-top: 20px;
+}
+.flexproductos{
+    margin: 100px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.vermas{
+    display:flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+/* main ofertas */
+.ofertas{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.flexofertas{
+    display: flex;
+    justify-content: center;
+}
+.ofertas img{
+    border-radius: 10px;
+    height: 300px;
+}
+/* main contactos */
+.contactos h1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.contactos h4{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.contactos iframe{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+.contactos{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.contactos-grid{
+    display: grid;
+    grid-template-areas:
+    "titulo titulo titulo"
+    "texto1 texto1 texto2"
+    "texto1 texto1 mapa"
+    "texto1 texto1 gmail";
+    /* a las apuradas por eso no puse punto en los lugares que no queria poner nada XD */
+    /*cantidad de ancho de cada columna ,1 valor por cada una  */
+    grid-template-columns: 25% 40% 25%;
+
+    /* cantidad de alto de cada fila,1 valor por cada una */
+    grid-template-rows: repeat(2,100px) 300px 100px ;
+    /* centrar la grila como caja cerrada */
+    justify-content: center;
+    /* eje horizontal */
+    justify-items: center;
+    /* eje vertical */
+    align-items: center;
+}
+.grid-titulo{
+    grid-area: titulo;
+}
+.grid-texto-1{
+    grid-area: texto1;
+}
+/* main devoluciones */
+.devoluciones p{
+    margin: 100px 100px;
+    text-align: center;
+}
+
+/* footer */
+.footer{
+    background-color: black;
+    padding: 50px 20px;
+    position: relative;
+}
+
+.footer-link{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 0;
+}
+.link{
+    list-style: none;
+    width: 50%;
+}
+.link h3{
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.link a{
+    color: white;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 5px;
+}
+li a:hover{
+    color: #387478;
+}
+.link p{
+    color: white;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 5px;
+}
+.imgig{
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: transform 0.3s ease;
+}
+.imgig:hover {
+    transform: scale(1.1);
+}
+
+/* resposive */
+/* mobile */
+@media (max-width:480px){
+    header{
+        .img{
+            width: 350px;
+            height: 100px;
+            margin-left: 10px;
+            background-position: 50% 50%;
+            background-image:url(../imagenes/FROST\ STUDIOS.png);
+        }
+        .barradenavegacion{
+            width: 100%;
+            margin-left: 0px;
+        }
+    }
+    .bienvenida{
+        display: grid;
+        grid-template-areas:
+        "textoid"
+        "textobienvenida"
+        "img";
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px 200px 200px;
+    }
+}
+
+/* Grid Quienes Somos */
+.grid-bienvenida {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-textobienvenida2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.grid-texoid {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.grid-textobienvenida {
+    grid-column: 1;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.grid-img {
+    grid-column: 2;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.gird-imgpng {
+    grid-column: 3;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-textobienvenida2 {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .grid-textobienvenida,
+    .grid-img,
+    .gird-imgpng {
+        grid-column: 1;
+    }
+
+    .grid-img,
+    .gird-imgpng {
+        margin: 20px auto;
+    }
+
+    .footer-link {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Instagram icon goes to footer in mobile */
+    .imgig {
+        position: static;
+        display: block;
+        width: 60px;
+        height: 60px;
+        margin: 20px auto 0;
+        order: 10;
+    }
+
+    .imgig img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Custom styles to complement Bootstrap 5 */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+/* Global styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+h1, h2, h3, .headings-font {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.display-4 {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.lead {
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Custom Navbar Styles */
+.navbar .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+    color:red;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav .nav-link {
+        background-color: #fff;
+        margin: 0 5px;
+
+    }
+}
+
+/* Product cards */
+.product-card {
+    transition: transform 0.3s ease;
+}
+
+.product-card .card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Instagram icon */
+#instagram-link {
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+#instagram-link:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 767px) {
+    #instagram-link {
+        position: static !important;
+        display: block;
+        margin: 20px auto 0;
+        text-align: center;
+    }
+
+    #instagram-link img {
+        
+        width: 50px;
+        height: 50px;
+    }
+    
+}
+
+/* Contact page grid styles */
+.contactos-grid {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+@media (max-width: 767px) {
+    .contactos-grid {
+        text-align: center;
+    }
+}
+
+/* Offers section */
+.oferta-imagen {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.oferta-imagen:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer links animation */
+.list-unstyled a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.list-unstyled a:hover {
+    color: #b3948b !important;
+    transform: translateX(5px);
+}
+
+/* Footer headings */
+footer h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
