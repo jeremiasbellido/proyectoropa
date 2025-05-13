@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/*  fuente */
+/*   font-family: "Bebas Neue", sans-serif; */
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.h1-center {
+  text-align: center;
+}
+
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+  order: 2;
+}
+
+.burger-menu span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #000000;
+  border-radius: 3px;
+  transition: all 0.3s linear;
+}
+
+/* Burger animation */
+.burger-menu[aria-expanded=true] span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-menu[aria-expanded=true] span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu[aria-expanded=true] span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Google Fonts */
+/* Global styles */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, .headings-font {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.display-4 {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.lead {
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Custom Navbar Styles */
+.navbar .nav-link {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  background-color: #e9ecef;
+  transform: translateY(-2px);
+  color: #ff0000;
+}
+
+/* Instagram icon */
+#instagram-link {
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+#instagram-link:hover {
+  transform: scale(1.1);
+}
+
+/* Footer links animation */
+.list-unstyled a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.list-unstyled a:hover {
+  color: #b3948b !important;
+  transform: translateX(5px);
+}
+
+/* Footer headings */
+footer h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Product cards */
+.product-card {
+  transition: transform 0.3s ease;
+}
+
+.product-card .card-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Offers section */
+.oferta-imagen {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.oferta-imagen:hover {
+  transform: translateY(-5px);
+}
+
+/* Hide burger on desktop and restore nav styles */
+@media (min-width: 768px) {
+  header {
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 0;
+  }
+  .burger-menu {
+    display: none;
+  }
+}
+/* mobile */
+@media (max-width: 480px) {
+  header .img {
+    width: 350px;
+    height: 100px;
+    margin-left: 10px;
+    background-position: 50% 50%;
+    background-image: url(../imagenes/FROST\ STUDIOS.png);
+  }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Instagram icon goes to footer in mobile */
+  .imgig {
+    position: static;
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 20px auto 0;
+    order: 10;
+  }
+  .imgig img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-nav .nav-link {
+    background-color: #fff;
+    margin: 0 5px;
+  }
+}
+@media (max-width: 767px) {
+  #instagram-link {
+    position: static !important;
+    display: block;
+    margin: 20px auto 0;
+    text-align: center;
+  }
+  #instagram-link img {
+    width: 50px;
+    height: 50px;
+  }
+  .contactos-grid {
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */

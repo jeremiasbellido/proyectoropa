@@ -1,0 +1,14 @@
+/* Product cards */
+.product-card {
+    transition: transform 0.3s ease;
+}
+
+.product-card .card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}

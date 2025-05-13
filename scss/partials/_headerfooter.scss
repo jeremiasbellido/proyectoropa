@@ -1,0 +1,42 @@
+/* Custom Navbar Styles */
+.navbar .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+    color:#ff0000;
+}
+/* Instagram icon */
+#instagram-link {
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+#instagram-link:hover {
+    transform: scale(1.1);
+}
+/* Footer links animation */
+.list-unstyled a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.list-unstyled a:hover {
+    color: #b3948b !important;
+    transform: translateX(5px);
+}
+
+/* Footer headings */
+footer h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}

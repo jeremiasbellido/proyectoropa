@@ -1,0 +1,67 @@
+/* Hide burger on desktop and restore nav styles */
+@media (min-width: 768px) {
+    header {
+        flex-wrap: nowrap;
+        justify-content: center;
+        padding: 0;
+    } 
+    .burger-menu {
+        display: none;
+    } 
+} 
+/* mobile */
+@media (max-width:480px){
+    header{
+        .img{
+            width: 350px;
+            height: 100px;
+            margin-left: 10px;
+            background-position: 50% 50%;
+            background-image:url(../imagenes/FROST\ STUDIOS.png);
+        }
+    }
+} 
+/* Responsive Design */
+@media (max-width: 768px) {
+ 
+
+    /* Instagram icon goes to footer in mobile */
+    .imgig {
+        position: static;
+        display: block;
+        width: 60px;
+        height: 60px;
+        margin: 20px auto 0;
+        order: 10;
+    }
+
+    .imgig img {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (min-width: 768px) {
+    .navbar-nav .nav-link {
+        background-color: #fff;
+        margin: 0 5px;
+
+    }
+}
+@media (max-width: 767px) {
+    #instagram-link {
+        position: static !important;
+        display: block;
+        margin: 20px auto 0;
+        text-align: center;
+    }
+
+    #instagram-link img {
+        
+        width: 50px;
+        height: 50px;
+    }
+     .contactos-grid {
+        text-align: center;
+    }
+    
+}
